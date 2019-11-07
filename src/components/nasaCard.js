@@ -5,16 +5,19 @@ const NasaCard = props => {
     <div>
       <h1>{props.imgUrl.title}</h1>
       <h2>{props.imgUrl.date}</h2>
-      <img
-        src={
-          props.imgUrl.media_type === "video" ? (
-            <iframe width="420" heigh="315" src={props.imgUrl.url} />
-          ) : (
-            <img src={props.imgUrl.hdurl} />
-          )
-        }
-        alt="space and shit"
-      />
+      <div className="media">
+        {props.imgUrl.media_type === "video" ? (
+          <iframe
+            title="Video, but with space"
+            width="1080"
+            height="720"
+            alt="space and shit"
+            src={props.imgUrl.url}
+          />
+        ) : (
+          <img alt="spaceimage" src={props.imgUrl.hdurl} />
+        )}
+      </div>
       <div>
         <h3>Details</h3>
         <p>{props.imgUrl.explanation}</p>
