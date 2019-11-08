@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NasaAotd from "./components/nasaCardInfo.js";
 import NavBar from "./components/navBar";
-import axios from "axios";
-import DatePicker from "react-date-picker";
 import "./App.css";
 
 function App() {

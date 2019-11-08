@@ -27,7 +27,6 @@ const NavBar = props => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-
   return (
     <div>
       <Navbar color="dark" dark expand="md">

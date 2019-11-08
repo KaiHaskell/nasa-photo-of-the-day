@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import NasaCard from "./nasaCard";
 import axios from "axios";
-import DatePicker from "react-date-picker";
 
 const NasaAotd = () => {
   const [photo, setPhoto] = useState([]);
-
   useEffect(() => {
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=OPfamgCyYwhJvre3PNrqYoTF4OdMQEPSYJ2XNNTg&date=1999-12-31`
+        `https://api.nasa.gov/planetary/apod?api_key=OPfamgCyYwhJvre3PNrqYoTF4OdMQEPSYJ2XNNTg&date=1998-10-11`
       )
       .then(response => {
         console.log(response.data);
@@ -22,9 +20,8 @@ const NasaAotd = () => {
 
   return (
     <div className="container">
-      <DatePicker />
       <div className="img-container">
-        <NasaCard imgUrl={photo} />;
+        <NasaCard imgUrl={photo} />
       </div>
     </div>
   );
