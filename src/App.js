@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NasaAotd from "./components/nasaCardInfo.js";
 import NavBar from "./components/navBar";
 import "./App.css";
