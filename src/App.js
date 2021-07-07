@@ -1,13 +1,13 @@
 import React from "react";
+import NasaAotd from "./components/nasaCardInfo.js";
+import NavBar from "./components/navBar";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <NavBar />
+      <NasaAotd />
     </div>
   );
 }
